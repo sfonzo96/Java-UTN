@@ -1,4 +1,4 @@
-public class Guia3_2 {
+public class Guia3_2_key {
 
   public static void main(String[] args) {
     String text = "testingg";

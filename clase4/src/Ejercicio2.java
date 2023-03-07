@@ -4,7 +4,7 @@ import java.nio.file.*;
 public class Ejercicio2 {
   public static void main(String[] args) throws Exception {
 
-    String pathFile = ".\\phrases.txt";
+    String pathFile = ".\\src\\phrases.txt"; // Dependent on where it's executed from, default considered is project folder
     char character = ' ';
 
     iterateLines(pathFile, character);

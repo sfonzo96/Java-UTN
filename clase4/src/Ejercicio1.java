@@ -2,14 +2,14 @@ import java.util.*;
 
 public class Ejercicio1 {
   public static void main(String[] args) {
-    int max = getMax(setNumbers());
+    int max = getMax(createNumbersArray());
     System.out.printf("The maximum number amongst introduced is: %d.%n", max);
 
-    int sum = sum(setNumbers());
+    int sum = sum(createNumbersArray());
     System.out.printf("The sum of all numbers introduced is: %d.%n", sum);
   }
 
-  private static int[] setNumbers() {
+  private static int[] createNumbersArray() {
     System.out.println("Enter the quantity of numbers you want to use:");
     Scanner quantityInput = new Scanner(System.in);
     int quantity = Integer.parseInt(quantityInput.next());
