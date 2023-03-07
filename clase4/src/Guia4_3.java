@@ -1,6 +1,6 @@
 import java.nio.file.*;
 public class Guia4_3 {
-  public static <error> void main(String[] args) {
+  public static void main(String[] args) {
     String operation = "encrypt"; // Takes "encrypt" or "decrypt" as valid values
 
     // to encrypt
