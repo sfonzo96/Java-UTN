@@ -24,6 +24,13 @@ public class Guia3_2_key {
 
     for (int i = 0; i < text.length(); i++) {
 
+      // recorrer palabra base
+      // para cada caracter text.charAt(i), guardar valor en una variable del for
+      // ver en qué posición está ese caracter dentro del abecedario
+      // sumar desplazamiento a la posición posiciónNueva abecedario.indexOf(char) + desplazamiento
+      // aplicar replace al caracter (oldChar, abc.charAt(posición nueva)
+      // concatenar en una nueva variable string y retornar al final del for
+
       char ch = text.toLowerCase().charAt(i);
 
       char newCh;
