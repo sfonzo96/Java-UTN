@@ -62,6 +62,7 @@ public class Cart {
         // alternative: throw new Exception("Error on file format or wrong data");
       }
 
+      // TODO: This code need to be simplified...
       // if line in file only has name and price, instances CartItem with name and price
       if (splitted.length == 2) {
         items[index] = new CartItem(
@@ -70,7 +71,7 @@ public class Cart {
                         Double.valueOf(splitted[1])
                 ));
       } else if (splitted.length == 3) {
-        // instances CartItem with name and price (which will define the product) and then the quantity
+        // if line in file has name, price and quantity, instances CartItem with name and price (which will define the product) and then the quantity
         items[index] = new CartItem(
                 new Product(
                         splitted[0],
@@ -78,7 +79,9 @@ public class Cart {
                         ),
                 Integer.valueOf(splitted[2]));
       } else {
+        // asuming file has name, price, quantity, the type of discount, and it's amount, defines de product and sets the quantity
         if (splitted[3].equals("fixed")) {
+          // defined product with FixedDiscount
           items[index] = new CartItem(
                   new Product(
                           splitted[0],
@@ -87,6 +90,7 @@ public class Cart {
                           ),
                   Integer.valueOf(splitted[2]));
         } else {
+          // defines product with PercentualDiscount
           items[index] = new CartItem(
                   new Product(
                           splitted[0],
@@ -105,9 +109,10 @@ public class Cart {
 
   public static void main(String[] args) {
 
-    // FROM FILE
+    // Relative file Path
     String fileDir = ".\\src\\Guia\\products.txt";
 
+    // try - catch is necessary in order to act if issue occur while reading the file
     try {
       CartItem[] products = getProductsFromFile(fileDir);
       Cart cart = new Cart(products);

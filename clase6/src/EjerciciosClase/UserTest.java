@@ -1,3 +1,5 @@
+package EjerciciosClase;
+
 public class UserTest {
   private String username;
   private String password;
@@ -8,6 +10,11 @@ public class UserTest {
     this.password = userData[1];
     this.email = userData[2];
     test();
+  }
+
+  public static void main(String[] args) {
+    String[] userData = {"sfonzo", "123456", "email@live.com"};
+    UserTest test1 = new UserTest(userData);
   }
 
   // Test
