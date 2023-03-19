@@ -1,0 +1,3 @@
+Nutella; 397.29; 1
+Queso Brie; 1009.77; 3
+Tuna; 800.50; 2
